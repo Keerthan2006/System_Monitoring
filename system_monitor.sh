@@ -4,6 +4,7 @@
 # Date   : 2023-10-05
 # Description : System Monitoring Script
 # Execution : bash system_monitor.sh
+# Permission are 755
 ###########################################################
 # Defining Threshold Values
 CPU_THRESHOLD=80
