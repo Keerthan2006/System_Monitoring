@@ -3,6 +3,7 @@
 # Author : Keerthan
 # Date   : 2023-10-05
 # Description : System Monitoring Script
+# Execution : bash system_monitor.sh
 ###########################################################
 # Defining Threshold Values
 CPU_THRESHOLD=80
