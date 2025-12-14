@@ -15,10 +15,11 @@ send_alert(){
 }
 # Continuous Monitoring of CPU , Memory and Disk Usage
 while true; do
-# CPU Monitoring
-CPU_USAGE=$(top -bn1 | grep "Cpu(s)" | awk '{print $2 + $4}')
-CPU_USAGE=${CPU_USAGE%.*}
-if [ $CPU_USAGE -gt $CPU_THRESHOLD ]; then
-    send_alert "CPU" $CPU_USAGE
-fi
+    # CPU Monitoring
+    CPU_USAGE=$(top -bn1 | grep "Cpu(s)" | awk '{print $2 + $4}')
+    CPU_USAGE=${CPU_USAGE%.*}
+    if [ $CPU_USAGE -gt $CPU_THRESHOLD ]; then
+        send_alert "CPU" $CPU_USAGE
+    fi
+done
 
